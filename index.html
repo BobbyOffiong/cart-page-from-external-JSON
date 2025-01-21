@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Marmeto</title>
+    <link rel="icon" type="image/jpg" href="./images/favicon.jpg" sizes="32x32">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!------------------------------HEADER----------------------------->
+    <header>
+        <div class="logo-div">
+            <a href="#">
+                <img src="images/b-b-s-logo.svg" alt="logo" class="logo">
+                Marmeto</a>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!--<li><a href="#cart" class="cart-link">Cart</a></li>-->
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <a href="#search"><i class="fas fa-search"></i></a>
+            <a href="#user"><i class="fas fa-heart"></i></a>
+            <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+     <!--------------Blurred Background Section----------->
+     <div class="blurred-section">
+        <div class="content">
+            <div class="logo">
+                <img src="images/b-b-s-logo.svg" alt="logo" class="b-b-s-logo">
+            </div>
+            <h1>Cart</h1>
+            <p>Home > <span class="cart-span">Cart</span></p>
+        </div>
+    </div>
+
+<!---------------------CART CONTAINER SECTION---------------------->
+    <main class="cart-container">
+        <!-- Cart Items Section -->
+        <div id="cart-items" class="cart-items-section">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Cart Totals Section -->
+        <aside class="cart-totals-section">
+            <span class="cart-totals-heading">Cart Totals</span>
+            <div class="totals-row subtotal-div">
+                <span class="subtotal-text">Subtotal:</span>
+                <span id="cart-subtotal">Rs. 0.00</span>
+            </div>
+            <div class="totals-row total-div">
+                <span class="total-text">Total:</span>
+                <span id="cart-total">Rs. 0.00</span>
+            </div>
+            <button class="checkout-btn">Check Out</button>
+        </aside>
+    </main>
+    
+
+    <div id="loader" class="hidden">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Confirmation Modal -->
+    <div id="remove-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to remove this item from your cart?</p>
+            <button id="confirm-remove" class="btn btn-confirm">Yes</button>
+            <button id="cancel-remove" class="btn btn-cancel">No</button>
+        </div>
+    </div>
+    
+
+
+<!------------------FOOTER------------------>
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-item">
+            <img src="./images/trophy.png">
+            <div class="footer-item-content">
+            <span>High Quality</span>
+            <p>crafted from top materials</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="./images/guarantee.png">
+            <div class="footer-item-content">
+            <span>Warranty Protection</span>
+            <p>Over 2 years</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="./images/shipping.png">
+            <div class="footer-item-content">
+            <span>Free Shipping</span>
+            <p>Order over 150 $</p>
+            </div>
+        </div>
+        <div class="footer-item last-foot-item">
+            <img src="./images/support.png">
+            <div class="footer-item-content">
+            <span>24 / 7 Support</span>
+            <p>Dedicated support</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>
