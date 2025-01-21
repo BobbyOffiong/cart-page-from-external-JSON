@@ -61,8 +61,8 @@ function renderCartItems(items) {
                     <span class="cart-product-name">${item.title}</span>
                 </div>
             </td>
-            <td class="product-price">${formattedPrice}</td>
-            <td>
+            <td class="product-price" id="price-column">${formattedPrice}</td>
+            <td id="quantity-column">
                 <input type="number" min="1" value="${item.quantity}" class="cart-quantity-input" data-id="${item.id}" />
             </td>
             <td>
